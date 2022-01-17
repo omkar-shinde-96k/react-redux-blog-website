@@ -18,15 +18,17 @@ const Homepage = () => {
             <h1 align="center">NEWS</h1>
             <div className="main">
                 <div className="categories">
-                    <Link className="cat" to="/enter">Entertainment</Link>
-                    <Link className="cat" to="/sports">sports</Link>
+                    <Link className="cat" to="/popular">popular</Link>
+                    <Link className="cat" to="/sport">sport</Link>
+                    <Link className="cat" to="/entertainment">entertainment</Link>
                 </div>
                 <div className="news-sec">
                     <h1>hello</h1>
+                    <Outlet />
                 </div>
             </div>
 
-            {/* <Outlet /> */}
+
         </>
     )
 }

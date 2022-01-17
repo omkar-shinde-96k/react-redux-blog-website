@@ -3,6 +3,7 @@ import Homepage from './pages/Homepage';
 import { CreatePost } from './pages/CreatePost';
 import { Navbar } from './componants/Navbar';
 import ReadMore from './pages/ReadMore';
+import { PostByCategory } from './pages/PostByCategory';
 
 import {
   BrowserRouter,
@@ -12,38 +13,30 @@ import {
   Outlet
 } from "react-router-dom";
 
-const Enter = () => {
-  return (
-    <div>
-      enter
-    </div>
-  )
-}
-const Soprts = () => {
-  return (
-    <div>
-      sport
-    </div>
-  )
-}
 
 function App() {
   return (
     <>
-      <Navbar />
-
       <BrowserRouter>
         <Routes>
 
-          <Route path="/" element={<Homepage />}>
-            <Route index element={<Homepage />} />
+
+          <Route path="/" element={<Navbar />}>
+
+            <Route path="/" element={<Homepage />}>
+              <Route path=":catId" element={<PostByCategory />} />
+              <Route path="post/:postId" element={<ReadMore />} />
+              <Route index element={<h1>popular</h1>} />
+            </Route>
+
+            <Route path="/createpost" element={<CreatePost />} />
+            <Route path="*" element={<h1>page not found</h1>} />
+
           </Route>
-          <Route path="createpost" element={<CreatePost />} />
-          <Route path="readmore" element={<ReadMore />} />
         </Routes>
       </BrowserRouter>
 
-      <Outlet/>
+      {/* <Outlet /> */}
 
     </>
   );
