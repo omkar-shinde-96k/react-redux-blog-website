@@ -8,8 +8,12 @@ const PostReducer = (state = [], action) => {
             let add = { id, ...action.payload }
             posts.push(add);
             console.log("one data added", posts);
-            id++
+            id++;
             return posts
+        }
+        case "DELETE": {
+            console.log("delete reducer", action.payload);
+            posts = posts.filter((curr) => curr.id !== action.payload) 
         }
 
         default: return posts;

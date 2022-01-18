@@ -13,8 +13,7 @@ export const CreateCategory = () => {
     const handleChange = (e) => {
         setCategory({ ...Category, [e.target.name]: e.target.value })
     }
-
-    console.log("curr categorystore", categorystore);
+ 
 
     const [open, setOpen] = useState(false);
     const handleClick = () => setOpen(true);
