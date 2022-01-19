@@ -72,8 +72,8 @@ export const AllPosts = () => {
                                         <MoreVertIcon />
                                     </IconButton>
                                 }
-                                title="Shrimp and Chorizo Paella"
-                                subheader="September 14, 2016"
+                                title="Omkar Shinde"
+                                subheader="Today"
                             />
                             <CardMedia
                                 component="img"

@@ -1,4 +1,4 @@
-let category = [];
+let category = [{category: 'cricket'}];
 let id = 0;
 
 const CategoryData = (state = [], action) => {
